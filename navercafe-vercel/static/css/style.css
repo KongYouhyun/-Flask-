@@ -207,12 +207,14 @@ ul { list-style: none; margin: 0; padding: 0; }
 .grade-list li:nth-child(1) { color: var(--accent-gold); font-weight: 800; }
 .g-score { margin-left: auto; color: var(--text-light); }
 
+/* [수정] 깨지기 쉽던 ad-box에 패딩(padding) 부여 */
 .ad-box {
   background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink));
   color: #fff;
   font-size: 13px;
   line-height: 1.5;
   text-align: center;
+  padding: 16px;
 }
 .ad-box strong { display: block; margin-top: 4px; font-size: 14px; }
 
@@ -222,7 +224,6 @@ ul { list-style: none; margin: 0; padding: 0; }
   font-size: 16px;
   font-weight: 800;
   margin: 0 0 10px;
-  padding-left: 2px;
   border-left: 4px solid var(--naver-green);
   padding-left: 10px;
 }
@@ -478,5 +479,10 @@ ul { list-style: none; margin: 0; padding: 0; }
   .cafe-header-inner { flex-wrap: wrap; }
   .cafe-stats { order: 3; width: 100%; justify-content: space-around; }
   .join-btn { order: 2; }
-  .sidebar { order: 2; }
+  
+  /* [수정] HTML 구조에 정의된 실제 클래스(.side-box)로 타겟 명시하여 모바일 순서 정상화 */
+  .side-box { order: 2; }
+  
+  /* [추가] 모바일 가독성을 위해 게시글 목록 행 내부 구조 유연화 */
+  .post-list .post-row { padding: 12px 4px; }
 }
